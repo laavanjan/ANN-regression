@@ -21,7 +21,6 @@ with open('scaler.pkl', 'rb') as file:
 
 ## streamlit app
 st.title('Estimated Salary Prediction')
-st.header('By Laavanjan')
 
 # User input
 geography = st.selectbox('Geography', onehot_encoder_geo.categories_[0])
@@ -63,6 +62,24 @@ input_data_scaled = scaler.transform(input_data)
 prediction = model.predict(input_data_scaled)
 predicted_salary = prediction[0][0]
 
-st.write(f'Churn Probability: {predicted_salary:.2f}')
+st.write(f'predicted_salary: {predicted_salary:.2f}')
+custom_footer = """
+    <style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+    </style>
+    <div class="footer">
+        Developed by <b>Laavanjan</b> | © Faculty of IT B22
+    </div>
+"""
+st.markdown(custom_footer, unsafe_allow_html=True)
 
 
