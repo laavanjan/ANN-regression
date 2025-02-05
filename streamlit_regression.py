@@ -74,7 +74,7 @@ custom_footer = """
         padding: 10px;
         font-size: 14px;
         color: white;
-        border:3px solid white;
+        border:2px solid white;
         border-radius:10px;
     }
     </style>
