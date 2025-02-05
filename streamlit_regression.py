@@ -45,7 +45,7 @@ input_data = pd.DataFrame({
     'NumOfProducts': [num_of_products],
     'HasCrCard': [has_cr_card],
     'IsActiveMember': [is_active_member],
-    
+    'Exited':[exited]
 })
 
 # One-hot encode 'Geography'
