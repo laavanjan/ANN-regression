@@ -66,14 +66,14 @@ st.write(f'predicted_salary: {predicted_salary:.2f}')
 custom_footer = """
     <style>
     .footer {
-        position: fixed;
+        position: scroll;
         bottom: 0;
         width: 100%;
-        background-color: #f5f5f5;
+        background-color: black;
         text-align: center;
         padding: 10px;
         font-size: 14px;
-        color: #333;
+        color: white;
     }
     </style>
     <div class="footer">
