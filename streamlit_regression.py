@@ -20,7 +20,7 @@ with open('scaler.pkl', 'rb') as file:
 
 
 ## streamlit app
-st.title('Customer Churn PRediction')
+st.title('Estimated Salary Prediction')
 st.header('By Laavanjan')
 
 # User input
@@ -61,11 +61,8 @@ input_data_scaled = scaler.transform(input_data)
 
 # Predict churn
 prediction = model.predict(input_data_scaled)
-prediction_proba = prediction[0][0]
+predicted_salary = prediction[0][0]
 
-st.write(f'Churn Probability: {prediction_proba:.2f}')
+st.write(f'Churn Probability: {predicted_salary:.2f}')
 
-if prediction_proba > 0.5:
-    st.write('The customer is likely to churn.')
-else:
-    st.write('The customer is not likely to churn.')
+
